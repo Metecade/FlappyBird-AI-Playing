@@ -2,6 +2,7 @@ import time
 from environment import FlappyBirdEnv
 from dqn_agent import DQNAgent
 import torch
+import sys
 
 
 def test_model(model_path, num_episodes=10, render=True):
@@ -42,4 +43,5 @@ def test_model(model_path, num_episodes=10, render=True):
 
 
 if __name__ == '__main__':
-    test_model('models/final_model.pth', num_episodes=5, render=True)
+    model_path = sys.argv[1]
+    test_model(model_path, num_episodes=5, render=True)

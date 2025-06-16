@@ -1,6 +1,10 @@
 #!/bin/bash
 
-python test.py
+# 可以选择运行的模型文件
+MODEL_PATH="models/final_model.pth"
+
+python test.py \
+      "$MODEL_PATH"
 
 if [ $? -ne 0 ]; then
     echo "Python脚本执行失败！"
